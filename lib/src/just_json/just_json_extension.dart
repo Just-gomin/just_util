@@ -10,7 +10,7 @@ extension JustJsonExtension on Map<String, dynamic> {
 
   /// If map contains key, return value.
   /// Else return null.
-  dynamic getIfPresent({required String key}) {
-    return containsKey(key) ? this[key] : null;
+  dynamic getIfPresent({required String key, dynamic defaultVal}) {
+    return containsKey(key) ? this[key] : defaultVal;
   }
 }
